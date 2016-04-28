@@ -20,6 +20,11 @@
 @font-ch-family: "Microsoft Yahei", "Microsoft JhengHei", "Hiragino Sans GB", "WenQuanYi Micro Hei";
 @font-en-family: "Helvetica Neue", "Helvetica", "Verdana", "Geneva", "sans-serif";
 
+@screen-xm-min: 544px;
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
 .text-disabled { color: @color-line-gray; }
 .text-primary { color: @color-line-blue; }
 .text-success { color: @color-line-green; }
@@ -77,3 +82,19 @@ code { padding: 2px 4px; font-size: 90%; color: #c7254e; background-color: #f9f2
 kbd { padding: 2px 4px; font-size: 90%; color: #fff; background-color: #333; border-radius: 4px; .mixin(code); }
 pre { display: block; padding: 9.5px; color: #333; font-size: 90%; margin: 0 0 10px; border: 1px solid #ccc; background-color: #f5f5f5; border-radius: 4px; .mixin(code); }
 samp {.mixin(code);}
+
+.row { width: 100%; }
+.row-full { width: 100%; }
+
+@media (min-width: @screen-xm-min) {
+    .row { max-width: 100% }
+}
+@media (min-width: @screen-sm-min) {
+    .row { max-width: 720px; }
+}
+@media (min-width: @screen-md-min) {
+    .row { max-width: 940px; }
+}
+@media (min-width: @screen-lg-min) {
+    .row { max-width: 1140px; }
+}
